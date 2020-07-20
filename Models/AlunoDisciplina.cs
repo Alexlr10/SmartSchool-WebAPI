@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace SmartSchool_WebAPI.Models {
 
     public class AlunoDisciplina {
@@ -16,6 +18,7 @@ namespace SmartSchool_WebAPI.Models {
         public int AlunoId { get; set; }
         public Disciplina Disciplina { get; set; }
         public int DisciplinaId { get; set; }
+        public IEnumerable<AlunoDisciplina> AlunoDisciplinas { get; set; }
        
     }
 }

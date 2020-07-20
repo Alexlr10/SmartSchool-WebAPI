@@ -1,22 +1,18 @@
+
+using System.Collections.Generic;
+
 namespace SmartSchool_WebAPI.Models {
-
     public class Disciplina {
-
-        public Disciplina() {
-
+        public Disciplina() { }
+        public Disciplina(int id, string nome, int professorId) {
+            this.Id = id;
+            this.Nome = nome;
+            this.ProfessorId = professorId;
         }
-
-        public Disciplina(int id, string nome, int ProfessorId) {
-            this.id = id;
-            this.nome = nome;
-            this.ProfessorId = ProfessorId;
-
-        }
-
-        public int id { get; set; }
-        public string nome { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
         public int ProfessorId { get; set; }
         public Professor Professor { get; set; }
-
+        public IEnumerable<AlunoDisciplina> AlunosDisciplinas { get; set; }
     }
 }
